@@ -5,8 +5,8 @@
     --column-count: 1;
 
     display: grid;
-    grid-template-columns: repeat(var(--column-count), 200px);
-    gap: 46px 48px;
+    grid-template-columns: repeat(var(--column-count), $product-card-width);
+    gap: $catalog-grid-gap;
     justify-content: center;
 
     @media (min-width: 488px) {

@@ -3,27 +3,36 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 200px;
-  height: 408px;
+  width: $product-card-width;
+  height: $product-card-height;
   padding: 30px 16px 16px;
   background-color: $white;
   border: 1px solid $lite-gray;
   border-radius: 5px;
-
-  &__image-block {
-    flex-grow: 1;
-    margin: 3px;
-    margin-bottom: 10px;
-    background: top center / contain no-repeat url(../images/imac.jpeg);
-  }
+  transition: transform $transition-duration;
 
   &__title {
     margin: 0 0 4px;
     max-height: 40px;
     font-size: 12px;
     font-weight: 500;
-
     overflow: hidden;
+    transition: color $transition-duration;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+
+    & .card__title {
+      color: $title-hover;
+    }
+  }
+
+  &__image-block {
+    flex-grow: 1;
+    margin: 3px;
+    margin-bottom: 10px;
+    background: top center / contain no-repeat url(../images/imac.jpeg);
   }
 
   &__meta {
@@ -34,7 +43,7 @@
     color: $secondary-color;
   }
 
-  &__meta-def {
+  &__def {
     margin-left: 2.5px;
   }
 
@@ -58,7 +67,7 @@
     align-items: center;
     margin-bottom: 16px;
 
-    &-word {
+    &-label {
       font-size: 12px;
       line-height: 18px;
       color: $secondary-color;
@@ -86,8 +95,8 @@
     text-decoration: none;
     border: 1px solid $blue-accent;
     transition:
-      color 0.3s ease,
-      background-color 0.3s ease;
+      color $transition-duration ease,
+      background-color $transition-duration ease;
 
     &:hover {
       color: $blue-accent;
