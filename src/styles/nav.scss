@@ -12,7 +12,7 @@
 
 .nav__link {
   display: inline-block;
-  transition: color ease 0.4s;
+  transition: color ease $transition-duration;
   text-transform: uppercase;
   line-height: 60px;
   font-size: 12px;

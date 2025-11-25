@@ -1,6 +1,4 @@
 .catalog {
-  padding-block: 50px;
-
   &__container {
     --column-count: 1;
 
@@ -8,6 +6,7 @@
     grid-template-columns: repeat(var(--column-count), $product-card-width);
     gap: $catalog-grid-gap;
     justify-content: center;
+    padding: 50px 40px;
 
     @media (min-width: 488px) {
       --column-count: 2;
